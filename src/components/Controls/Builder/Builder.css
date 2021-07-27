@@ -1,0 +1,30 @@
+.builder {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+  margin: 12px 0;
+}
+
+.builder button {
+  display: block;
+  font: inherit;
+  padding: 5px;
+  margin: 0 12px;
+  width: 120px;
+  background: #9c27b0;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+.builder div {
+  color: #8e24aa;
+  margin: 0 12px;
+}
+
+.builder .title {
+    min-width: 100px;
+}

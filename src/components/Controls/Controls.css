@@ -1,0 +1,36 @@
+.controls {
+    width: 50rem;
+    background: #fefefe;
+    border: solid 1px #999;
+    display: flex;
+    flex-flow: column;
+    margin: 6rem auto 0;
+    align-items: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 32px 0;
+    box-shadow: 0 0 25px 5px rgba(136, 103, 103, 0.08);
+}
+
+.order-btn {
+    display: block;
+    font: inherit;
+    padding: 15px;
+    margin: 32px 12px 0;
+    width: 250px;
+    background: #be77cc;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+
+.total-price p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px;
+    color: #6a1b9a;
+}
