@@ -1,0 +1,16 @@
+.checkout {
+    width: 50rem;
+    background: #fefefe;
+    border: solid 1px #999;
+    display: flex;
+    flex-flow: column;
+    margin: 6rem auto 0;
+    align-items: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 32px 0;
+    box-shadow: 0 0 25px 5px rgba(136, 103, 103, 0.08);
+}

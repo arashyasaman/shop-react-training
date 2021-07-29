@@ -15,19 +15,25 @@ const prices = {
 
 class Shopping extends React.Component {
     state = {
-        products: null,
+        products: {
+            کتاب: 0,
+            دفتر: 0,
+            مداد: 0,
+            خودکار: 0,
+          },
         totalPrice: 0,
         purchased: false,
         loader: false
     }    
 
-    componentDidMount() {
-        axios
-            .get('https://shop-react-2c9bc-default-rtdb.firebaseio.com/products.json')
-            .then((response) => {
-                this.setState({ products: response.data })
-            })
-    }
+    // componentDidMount() {
+    //     console.log(this.props)
+    //     axios
+    //         .get('https://shop-react-2c9bc-default-rtdb.firebaseio.com/products.json')
+    //         .then((response) => {
+    //             this.setState({ products: response.data })
+    //         })
+    // }
 
     addProductHandler = (type) => {
         const prevCount = this.state.products[type]
@@ -66,26 +72,28 @@ class Shopping extends React.Component {
         this.setState({ purchased: false })
     }
     purchaseContinueHandler = () => {      
-        this.setState({ loader: true })
-        const order = {
-            products: this.state.products,
-            totalPrice: this.state.totalPrice,
-            customer: {
-                name: 'Arash Yasaman',
-                email: 'ym.arash@gmail.com',
-            }
-        }
-        axios.post('/orders.json', order)
-        .then((response) => {
-            this.setState({ loader: false, purchased: false })
-            alert('خرید شما با موفقیت ثبت شد')
-            console.log(response)
-        })
-        .catch((response) => {
-            this.setState({ loader: false, purchased: false })
-            alert('متاسفانه خرید شما ثبت نشد')
-            console.log(response)
-        })
+        this.props.history.push('/account')
+        
+        // this.setState({ loader: true })
+        // const order = {
+        //     products: this.state.products,
+        //     totalPrice: this.state.totalPrice,
+        //     customer: {
+        //         name: 'Arash Yasaman',
+        //         email: 'ym.arash@gmail.com',
+        //     }
+        // }
+        // axios.post('/orders.json', order)
+        // .then((response) => {
+        //     this.setState({ loader: false, purchased: false })
+        //     alert('خرید شما با موفقیت ثبت شد')
+        //     console.log(response)
+        // })
+        // .catch((response) => {
+        //     this.setState({ loader: false, purchased: false })
+        //     alert('متاسفانه خرید شما ثبت نشد')
+        //     console.log(response)
+        // })
     }
  
     render() {
